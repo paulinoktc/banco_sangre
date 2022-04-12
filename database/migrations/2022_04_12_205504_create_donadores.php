@@ -22,6 +22,7 @@ class CreateDonadores extends Migration
             $table->string('foto');
             $table->string('telefono');
             $table->string('direccion');
+            $table->integer('cp');
             $table->string('latitud');
             $table->string('longitud');
             $table->bigInteger('ciudad_id')->unsigned();

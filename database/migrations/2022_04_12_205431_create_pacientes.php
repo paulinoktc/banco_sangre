@@ -24,6 +24,7 @@ class CreatePacientes extends Migration
             $table->string('foto')->nullable();
             $table->string('telefono')->nullable();
             $table->string('direccion')->nullable();
+            $table->integer('cp')->nullable();
             $table->string('nss')->nullable();
             $table->string('latitud')->nullable();
             $table->string('longitud')->nullable();
