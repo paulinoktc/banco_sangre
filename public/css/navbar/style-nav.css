@@ -1,0 +1,60 @@
+@import url(../variables.css);
+
+#header{
+    height: 80px;
+    width: 100%;
+    background-color: var(--dark-gray) !important;
+}
+
+/*Display block para hacer visible*/
+#nav-menu-hos{
+    display: block;
+}
+
+#nav-menu-don{
+    display: none;
+}
+
+#nav-menu-don .nav-item{
+   margin-right: 24px;
+}
+
+#navbarSupportedContent{
+    background-color: var(--dark-gray);
+    z-index: 1;
+    width: 100%;
+    padding-left: inherit;
+}
+.nav-item a{
+    text-decoration: none;
+    color: var(--gray-off) !important;
+    font-size: var(--md);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.nav-item a:hover{
+    color: var(--gray-on)!important;
+    border-bottom: 1px solid var(--gray-on);
+}
+
+.nav-item a:active{
+    color: var(--gray-on);
+    border-bottom: 1px solid var(--gray-on);
+}
+
+.btn-mi-cuenta{
+    width: 162px;
+    height: 36px;
+    background-color: var(--gray-button-blue);
+    color: var(--white) !important;
+}
+
+#menu-mi-cuenta{
+    background-color: var(--dark-gray);
+}
+
+i{
+    font-size: var(--md);
+}

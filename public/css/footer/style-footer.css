@@ -1,0 +1,61 @@
+@import url(../variables.css);
+
+footer{
+    background-color: var(--dark-gray);
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+}
+
+#section-curve{
+    position: relative;
+}
+
+.curve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.curve svg {
+    position: relative;
+    display: block;
+    width: calc(136% + 1.3px);
+    height: 111px;
+}
+
+.curve .shape-fill {
+    fill: #1C232D;
+}
+
+#logo-footer{
+    border-bottom: .5px solid var(--gray-button-bold);
+}
+
+/* Display flex para hacer visible*/
+#menu-footer-hos{
+    display: flex;
+}
+
+#menu-footer-don{
+    display: none;
+}
+
+#menu-footer-hos a,
+#menu-footer-don a{
+    text-decoration: none;
+    color: var(--gray-button-off);
+    font-size: var(--lg);
+    font-weight: 500;
+}
+
+#copyrigth p{
+    color: var(--gray-button-off);
+    font-size: var(--lg);
+    font-weight: 400;
+}
+
