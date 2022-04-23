@@ -1,0 +1,112 @@
+@import url(variables.css);
+body{
+    background-color: var(--dark);
+}
+
+#main{
+    display: grid;
+    place-content: center;
+}
+
+#fila-main{
+    border-radius: 5px;
+}
+
+#signin{
+    height: 70vh;
+    background-color: var(--primary-green);
+    align-content: center;
+    justify-items: center;
+    color: var(--gray-on);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#signin p{
+    width:50%;
+    font-size: var(--lg);
+}
+
+#signin h1{
+    font-size: var(--title);
+}
+
+.btn-signin{
+    border-color: var(--gray-on);
+    color: var(--gray-on);
+    width: 25%;
+    border-radius: 30px;
+}
+
+.btn-signin:hover{
+    border-color: var(--white);
+    color: var(--primary-green);
+    background-color: var(--white);
+}
+
+#signup{
+    height: 70vh;
+    background-color: var(--gray-on);
+    align-content: center;
+    justify-items: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#signup p{
+    width: 70%;
+    color: var(--dark);
+    font-size: var(--lg);
+}
+
+#signup h1{
+    color: var(--primary-green);
+    font-size: var(--title);
+}
+
+.btn-signup{
+    border-color: var(--primary-green);
+    color: var(--primary-green);
+    width: 25%;
+    border-radius: 30px;
+}
+
+.btn-signup:hover{
+    border-color: var(--white);
+    color: var(--white);
+    background-color: var(--primary-green);
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.footer svg {
+    position: relative;
+    display: block;
+    width: calc(123% + 1.3px);
+    height: 100px;
+}
+
+.footer .shape-fill {
+    fill: #20DF7F17;
+}
+
+.modal-content{
+    background-color: var(--dark);
+    width: 80vw;
+    color: var(--gray-on);
+}
+
+.modal-content a{
+    text-decoration: none;
+    color: var(--gray-on) !important;
+    font-size: 70px;
+}
