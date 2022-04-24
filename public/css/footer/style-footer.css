@@ -4,8 +4,9 @@ footer{
     background-color: var(--dark-gray);
     width: 100%;
     height: auto;
-    position: absolute;
+    /*position: absolute;
     bottom: 0;
+    */
 }
 
 #section-curve{

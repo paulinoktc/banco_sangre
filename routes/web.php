@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Hospital\HospitalController;
 use App\Http\Controllers\PruebasController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,6 +23,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
-Route::resource('test',PruebasController::class)->names('test');
+Route::resource('test', PruebasController::class)->names('test');
+
+Route::resource('hospital', HospitalController::class)->names('hospital');

@@ -14,6 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/all.min.js" integrity="sha512-Cvxz1E4gCrYKQfz6Ne+VoDiiLrbFBvc6BPh4iyKo2/ICdIodfgc5Q9cBjRivfQNUXBCEnQWcEInSXsvlNHY/ZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href=" {{ URL::asset('css/navbar/style-nav.css') }}">
     <link rel="stylesheet" href=" {{ URL::asset('css/footer/style-footer.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/hospital/style_hospital.css') }}">
 </head>
 
 <body>
