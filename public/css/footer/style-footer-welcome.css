@@ -1,0 +1,21 @@
+@import url(../variables.css);
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.footer svg {
+    position: relative;
+    display: block;
+    width: calc(123% + 1.3px);
+    height: 100px;
+}
+
+.footer .shape-fill {
+    fill: #20DF7F17;
+}

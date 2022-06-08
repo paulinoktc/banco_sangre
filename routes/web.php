@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\PruebasController;
+use App\Http\Controllers\Auth;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +15,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.index');
+});
+
+Route::get('login',function(){
+    return view('login');
+});
+
+Route::get('register-hospital',function(){
+    return view('register-hospital');
 });
 
 Route::get('/dashboard', function () {
@@ -23,5 +34,8 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
-
+/*
 Route::resource('test',PruebasController::class)->names('test');
+
+
+Route::resource('login',AuthenticatedSessionController::class)->names('login');*/

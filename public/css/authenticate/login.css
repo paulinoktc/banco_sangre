@@ -1,0 +1,30 @@
+@import url(variables.css);
+body{
+    background-color: var(--dark);
+}
+
+#main{
+    display: grid;
+    place-content: center;
+}
+
+#title{
+    color: var(--gray-on);
+    font-size: var(--title);
+    font-weight: 500;
+}
+
+#subtitle{
+    color: var(--gray-on);
+    font-size: var(--md);
+}
+
+.btn-coffirm{
+    background-color: var(--primary-green);
+    color: var(--gray-on);
+    width: inherit;
+}
+
+#forgot-password{
+    font-size: var( --xsm);
+}

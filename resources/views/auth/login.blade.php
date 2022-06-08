@@ -1,56 +1,56 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+@extends('welcome')
 
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
-
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+@section('authorization')
+    <main id="main">
+        <div class="container mt-5 text-center">
+            <div class="row">
+                <div class="column">
+                    <img src="{{ URL::asset('img/logo.png') }}" alt="logo">
+                </div>
             </div>
-
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
+            <div class="row mb-0">
+                <div class="column">
+                    <p id="title">Iniciar sesión</p>
+                </div>
             </div>
-
-            <!-- Remember Me -->
-            <div class="block mt-4">
-                <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
+            <div class="row mt-0">
+                <div class="column">
+                    <p id="subtitle">Inicia sesion con tu correo y tu contraseña</p>
+                </div>
             </div>
-
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
-
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
+            <div id="formulario" class="row">
+                <div class="col pt-2">
+                    <form>
+                    <div class="form-row ms-4 me-4">
+                        <div class="form-group col-6 col-md-12 mb-4">
+                            <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+                        </div>
+                        <div class="form-group col-6 col-md-12">
+                        <label for="inputPassword2" class="visually-hidden">Password</label>
+                            <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+                        </div>
+                    </div>
+                    <!--
+                    <div id="forgot-password" class="row mt-4">
+                        <div class="col">
+                            <input type="checkbox" name="" id="">
+                            <p>Recuerdame</p>
+                        </div>
+                        <div class="col">
+                            <a href=""><p>Olvide mi contraseña</p></a>
+                        </div>
+                    </div>
+                    -->
+                    <div class="form-row ms-4 me-4 mt-4">
+                        <div class="col-12">
+                        <button type="button" class="btn btn-coffirm btn-block">Enviar</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
             </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+            
+        </div>
+    </main>
+
+@endsection
