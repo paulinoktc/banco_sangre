@@ -9,7 +9,7 @@
                             <img src="{{ URL::asset('img/logoLight.png') }}" alt="logo">
                             <h1>¡Bienvenido!</h1>
                             <p>Para poder acceder a tu cuenta porfavor inicia sesión.</p>
-                            <a type="button" class="btn btn-signin" href="{{route('login')}}">Sign in</a>
+                            <a type="button" class="btn btn-signin" href="{{route('login.create')}}">Sign in</a>
                     </div>
                     <div class="col-12 col-lg-5 px-0 text-center d-grid" id="signup">
                         <img src="{{ URL::asset('img/logoDark.png') }}" alt="logo">

@@ -21,9 +21,7 @@ Route::get('/', function () {
     return view('auth.index');
 });
 
-Route::get('login',function(){
-    return view('login');
-});
+Route::resource('login',Auth\AuthenticatedSessionController::class)->names('login');
 
 Route::get('register-hospital',function(){
     return view('register-hospital');
@@ -34,8 +32,4 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
-/*
-Route::resource('test',PruebasController::class)->names('test');
 
-
-Route::resource('login',AuthenticatedSessionController::class)->names('login');*/
