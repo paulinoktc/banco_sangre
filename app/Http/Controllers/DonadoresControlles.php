@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class PruebasController extends Controller
+class DonadoresControlles extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,7 @@ class PruebasController extends Controller
     public function index()
     {
         //
-        return view('auth.login2');
+
     }
 
     /**
@@ -24,7 +25,7 @@ class PruebasController extends Controller
      */
     public function create()
     {
-        //
+        return view('auth.register-donador');
     }
 
     /**
