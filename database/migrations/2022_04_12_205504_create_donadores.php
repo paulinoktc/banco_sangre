@@ -21,15 +21,16 @@ class CreateDonadores extends Migration
             $table->bigInteger('sangre_id')->unsigned();
             $table->string('foto');
             $table->string('telefono');
-            $table->string('direccion');
-            $table->integer('cp');
             $table->string('latitud');
             $table->string('longitud');
             $table->bigInteger('ciudad_id')->unsigned();
             $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('formulario_id')->unsigned();
             $table->foreign('ciudad_id')->references('id')->on('ciudades')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('sangre_id')->references('id')->on('sangre')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('formulario_id')->references('id')->on('formulario')->onDelete('cascade')->onUpdate('cascade');
+            $table->timestamps();
         });
     }
 

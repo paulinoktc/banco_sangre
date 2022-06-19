@@ -9,7 +9,7 @@
                             <img src="{{ URL::asset('img/logoLight.png') }}" alt="logo">
                             <h1>¡Bienvenido!</h1>
                             <p>Para poder acceder a tu cuenta porfavor inicia sesión.</p>
-                            <a type="button" class="btn btn-signin" href="{{route('login.create')}}">Sign in</a>
+                            <a type="button" class="btn btn-signin" href="{{route('login')}}">Sign in</a>
                     </div>
                     <div class="col-12 col-lg-5 px-0 text-center d-grid" id="signup">
                         <img src="{{ URL::asset('img/logoDark.png') }}" alt="logo">
@@ -33,11 +33,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col text-center">
-                            <a href="{{route('register')}}"><i class="fa-solid fa-hospital"></i></a>
+                            <a href="{{route('hospital.create')}}"><i class="fa-solid fa-hospital"></i></a>
                             <h3>Hospital</h3>
                         </div>
                         <div class="col text-center">
-                            <a href="#"><i class="fa-solid fa-hand-holding-heart"></i></i></a>
+                            <a href="{{route('donador.create')}}"><i class="fa-solid fa-hand-holding-heart"></i></i></a>
                             <h3>Donador</h3>
                         </div>
                     </div>

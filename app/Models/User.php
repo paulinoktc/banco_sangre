@@ -41,4 +41,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    //Relacion uno a uno user-hospital
+    public function paciente(){
+        return $this->hasOne('App\Models\Hospital');
+    }
+
+    //Relacion uno a uno user-donador
+    public function donador(){
+        return $this->hasOne('App\Models\Donador');
+    }
 }

@@ -23,19 +23,17 @@ class CreatePacientes extends Migration
             $table->bigInteger('sangre_id')->unsigned();
             $table->string('foto')->nullable();
             $table->string('telefono')->nullable();
-            $table->string('direccion')->nullable();
-            $table->integer('cp')->nullable();
-            $table->string('nss')->nullable();
+            $table->string('nss');
             $table->string('latitud')->nullable();
             $table->string('longitud')->nullable();
-            $table->string('status');
             $table->double('unidades_requeridas');
             $table->string('motivo')->nullable();
             $table->date('fecha_ingreso');
-            $table->integer('prioridad')->nullable();
-            $table->timestamps();
+            $table->bigInteger('prioridad_id')->unsigned();
             $table->foreign('hospital_id')->references('id')->on('hospitales')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('sangre_id')->references('id')->on('sangre')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('prioridad_id')->references('id')->on('prioridades')->onDelete('cascade')->onUpdate('cascade');
+            $table->timestamps();
         });
     }
 

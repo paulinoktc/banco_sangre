@@ -1,16 +1,49 @@
-@import url(variables.css);
+@import url(../variables.css);
+
+#main{
+    display: grid;
+    place-content: center;
+}
 
 #contenedor{
     background-color: var(--gray-on);
+    width: 60vw;
+    border-radius: 5px;
 }
 
 #encabezado{
     background-color: var(--dark-gray);
-    height: 20vh;
     align-content: center;
+    position: relative;
+    height: 15vh;
+    border-radius: 5px 5px 0 0;
+    border: 0;
+}
+
+.user-image{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 5rem;
+    left: 18.5rem;
 }
 
 .form-col{
     display: flex;
     flex-direction: column;
 }
+
+.form-group{
+    height: 86px !important;
+}
+
+.btn-secondary{
+    background-color: var(--gray-button-bold);
+}
+
+.btn-primary{
+    background-color: var(--primary-green);
+    border: 0;
+}
+

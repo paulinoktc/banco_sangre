@@ -18,14 +18,13 @@ class CreateHospitales extends Migration
             $table->string('rfc');
             $table->string('certificado');
             $table->string('nombre');
-            $table->string('direccion');
             $table->string('latitud');
             $table->string('longitud');
-            $table->integer('cp');
             $table->bigInteger('ciudad_id')->unsigned();
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('ciudad_id')->references('id')->on('ciudades')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->timestamps();
         });
     }
 

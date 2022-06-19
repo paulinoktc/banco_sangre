@@ -16,6 +16,8 @@ class CreatePreguntas extends Migration
         Schema::create('preguntas', function (Blueprint $table) {
             $table->id();
             $table->string('pregunta');
+            $table->bigInteger('formulario_id')->unsigned();
+            $table->foreign('formulario_id')->references('id')->on('formulario')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

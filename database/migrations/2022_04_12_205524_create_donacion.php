@@ -17,9 +17,10 @@ class CreateDonacion extends Migration
             $table->id();
             $table->bigInteger('paciente_id')->unsigned();
             $table->bigInteger('donador_id')->unsigned();
-            $table->integer('staus');
+            $table->integer('estatus');
             $table->double('unidades_donadas');
             $table->bigInteger('hospital_id')->unsigned();
+            $table->timestamps();
             $table->foreign('paciente_id')->references('id')->on('pacientes')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('donador_id')->references('id')->on('donadores')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('hospital_id')->references('id')->on('hospitales')->onDelete('cascade')->onUpdate('cascade');

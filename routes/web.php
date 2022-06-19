@@ -2,6 +2,11 @@
 
 use App\Http\Controllers\Auth;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\CiudadesController;
+use App\Http\Controllers\DonadoresController;
+use App\Http\Controllers\FormulariosController;
+use App\Http\Controllers\HospitalesController;
+use App\Http\Controllers\PacientesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,11 +26,15 @@ Route::get('/', function () {
     return view('auth.index');
 });
 
-Route::resource('login',Auth\AuthenticatedSessionController::class)->names('login');
+Route::get('/getCiudades/{estado_id}',[CiudadesController::class,'getCiudades']);
 
-Route::get('register-hospital',function(){
-    return view('register-hospital');
-});
+
+Route::resource('hospital',HospitalesController::class)->names('hospital');
+Route::resource('donador',DonadoresController::class)->names('donador');
+Route::resource('paciente',PacientesController::class)->names('paciente');
+Route::resource('formulario',FormulariosController::class)->names('formulario');
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
